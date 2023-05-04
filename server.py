@@ -13,7 +13,7 @@ constraint_keywords = ['red', 'green', 'blue', 'yellow', 'purple']
 image_constraints = ['landscape', 'portrait']
 
 openai.organization = "org-ShRy1Ith2eKCV8KxSP1x8CZj"
-openai.api_key = "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"
+openai.api_key = os.getenv("OPENAI_API_KEY") 
 openai.engine = "DALL-E"
 
 # Define the JSON-RPC endpoint method for generating images
