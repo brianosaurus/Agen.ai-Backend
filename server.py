@@ -37,13 +37,14 @@ async def generate_image(request: Request):
     # Apply the constraints to randomly generate an image
     response = openai.Image.create(
         prompt=data['subject'],
-        n=5,
-        size="1024x1024"
+        n=10,
+        size="1024x1024",
     )
     # img_url = response['data'][0]['url']
     # Return the generated image URL as a JSON-RPC response
     print(response)
-    return response
+
+    return response 
 
 @method
 def OPTIONS() -> Result:
